@@ -1,7 +1,7 @@
 /******************
-Name:
-ID:
-Assignment:
+Name: Alon Cohen
+ID: 213713019
+Assignment: ex1
 *******************/
 #include <stdio.h>
 
@@ -12,38 +12,48 @@ int main()
 
     // Ascii
     printf("Ascii:\n");
-    /*. Scan one character from the user.
-        Then, refer to it as an integer.
-        a. Print its value.
-        b:
-        Print “0”, if its integer representation is even.
-        print “1” if its integer representation is odd. */
+    printf("Please enter a character:");
+    char c;
+    c = getchar();
+    printf("Its numerical value is: %d\n", c);
+    printf("0 for even, 1 for odd: %d", c&1);
+
 
     // 2's complement and other representations
     printf("\n2's complement to other representations:\n");
-    /*. Scan a negative integer. [2’s complement].
-        Print its value in 1’s complement.
-        Print its value as unsigned. */
+    printf("Please enter a negative integer: ");
+    int n;
+    scanf("%d", &n);
+    printf("1's complement: %d\n", ~n);
+    printf("unsigned: %u\n", n);
+    
 
     // Shifting right and left
     printf("\nShifting right and left:\n");
-    /*. Scan 3 integers.
-        The first one - the value you will play with.
-        The second and the third - how much to shift right and left, respectively.
-        Print the value after shifting right and then shifting left. */
+    printf("Please enter 3 integers:\n ");
+    int num1, num2, num3;
+    scanf("%d %d %d", &num1, &num2, &num3);
+    printf("After shifting right and left: %d\n", num1>> num2 << num3);
+    
 
     // Even - Odd
     printf("\nEven - Odd:\n");
-    /* Scan 3 Integers.
-    If at least two of them are even - print 0.
-    If at least two of them are odd - print 1. */
+    printf("Please enter 3 integers:\n ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    // Checks all combinations of the integers to determine if the majority are odd.
+    int odd1 = num1 & 1;
+    int odd2 = num2 & 1;
+    int odd3 = num3 & 1;
+    int mostly_odd = (odd1 & odd2) | (odd2 & odd3) | (odd1 & odd3); 
+    printf("0 - most of them are even, 1 - most of them are odd: %d\n", mostly_odd);
 
     // Different Bases
     printf("\nDifferent Bases:\n");
-    /*  Scan two numbers:
-        One in octal base, one in Hexadecimal base.
-        Print their LSB’s.
-        Print their MSB’s. */
+    printf("Please enter 2 numbers in octal and hexadecimal bases:\n ");
+    int octal_num, hex_num;
+    scanf("%o %x", &octal_num, &hex_num);
+    printf("LSBs: %d %d \n", octal_num&1, hex_num&1);
+    printf("MSBs: %d %d \n", (octal_num >>31)&1, (hex_num >>31)&1);
 
     printf("Bye!\n");
 
