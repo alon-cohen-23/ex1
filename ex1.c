@@ -12,7 +12,7 @@ int main()
 
     // Ascii
     printf("Ascii:\n");
-    printf("Please enter a character:");
+    printf("Please enter a character\n");
     char c;
     c = getchar();
     printf("Its numerical value is: %d\n", c);
@@ -21,7 +21,7 @@ int main()
 
     // 2's complement and other representations
     printf("\n2's complement to other representations:\n");
-    printf("Please enter a negative integer: ");
+    printf("Please enter a negative integer\n");
     int n;
     scanf("%d", &n);
     printf("1's complement: %d\n", ~n);
@@ -30,7 +30,7 @@ int main()
 
     // Shifting right and left
     printf("\nShifting right and left:\n");
-    printf("Please enter 3 integers:\n ");
+    printf("Please enter 3 integers\n ");
     int num1, num2, num3;
     scanf("%d %d %d", &num1, &num2, &num3);
     printf("After shifting right and left: %d\n", num1>> num2 << num3);
@@ -38,7 +38,7 @@ int main()
 
     // Even - Odd
     printf("\nEven - Odd:\n");
-    printf("Please enter 3 integers:\n ");
+    printf("Please enter 3 integers\n ");
     scanf("%d %d %d", &num1, &num2, &num3);
     // Checks all combinations of the integers to determine if the majority are odd.
     int odd1 = num1 & 1;
@@ -49,7 +49,7 @@ int main()
 
     // Different Bases
     printf("\nDifferent Bases:\n");
-    printf("Please enter 2 numbers in octal and hexadecimal bases:\n ");
+    printf("Please enter two numbers in octal and hexadecimal bases\n ");
     int octal_num, hex_num;
     scanf("%o %x", &octal_num, &hex_num);
     printf("LSBs: %d %d \n", octal_num&1, hex_num&1);
