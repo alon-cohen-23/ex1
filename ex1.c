@@ -24,7 +24,8 @@ int main()
     printf("Please enter a negative integer\n");
     int n;
     scanf("%d", &n);
-    printf("1's complement: %d\n", ~n);
+    int flipped_n = ~n;  
+    printf("1's complement: %d\n", -flipped_n);
     printf("unsigned: %u\n", n);
     
 
@@ -59,3 +60,4 @@ int main()
 
     return 0;
 }
+
